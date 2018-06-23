@@ -7,7 +7,7 @@
     <ProjectGuid>{207AFA43-EEDC-490C-9F40-4E176AB02D0D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>BingImage</RootNamespace>
-    <AssemblyName>BingImage</AssemblyName>
+    <AssemblyName>必应每日壁纸</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -26,7 +26,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <SupportUrl>https://www.zhoushangren.com</SupportUrl>
     <PublisherName>ZhouShangren Studio</PublisherName>
-    <ApplicationRevision>10</ApplicationRevision>
+    <ApplicationRevision>16</ApplicationRevision>
     <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>

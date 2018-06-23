@@ -94,6 +94,8 @@ namespace BingImage
         public bool getAndSetBackgroundImage()
         {
             imageInfo = getImageInfo();
+            if (imageInfo == null)
+                return false;//无法联网
             Properties.Settings.Default.Reload();
             if (Properties.Settings.Default.imageVersion != imageInfo["images"][0]["hsh"].ToString())
             {
@@ -120,16 +122,23 @@ namespace BingImage
 
         public String sendGet(String url)
         {
-            var request = (HttpWebRequest)HttpWebRequest.Create(url);
-            var response = (HttpWebResponse)request.GetResponse();
-            return new StreamReader(response.GetResponseStream()).ReadToEnd();
+            try
+            {
+                var request = (HttpWebRequest)HttpWebRequest.Create(url);
+                var response = (HttpWebResponse)request.GetResponse();
+                return new StreamReader(response.GetResponseStream()).ReadToEnd();
+            }
+            catch
+            {
+                return null;
+            }
         }
 
         public JObject getImageInfo()
         {
             string getUrl = "http://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1";
             string jsonResponse = sendGet(getUrl);
-            JObject jo = (JObject)JsonConvert.DeserializeObject(jsonResponse);
+            JObject jo = jsonResponse == null ? null : (JObject)JsonConvert.DeserializeObject(jsonResponse);
             return jo;
         }
 
@@ -247,5 +256,7 @@ namespace BingImage
             About about = new About();
             about.Show();
         }
+
+        
     }
 }

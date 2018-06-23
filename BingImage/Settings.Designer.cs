@@ -88,7 +88,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Settings";
-            this.Text = "设置";
+            this.Text = "必应每日壁纸-设置";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Settings_Load);
             this.ResumeLayout(false);
