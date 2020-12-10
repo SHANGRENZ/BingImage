@@ -22,7 +22,7 @@ namespace BingImage
         {
 
             this.Left = SystemInformation.WorkingArea.Width - 320;
-            this.Top = SystemInformation.WorkingArea.Height - 140;
+            this.Top = SystemInformation.WorkingArea.Height - 200;
 
             //Form1 form1 = new Form1();
             //form1.TopMost = true;

@@ -125,7 +125,7 @@ namespace BingImage
             // 
             // timerCheckNewImage
             // 
-            this.timerCheckNewImage.Interval = 300000;
+            this.timerCheckNewImage.Interval = 3600000;
             this.timerCheckNewImage.Tick += new System.EventHandler(this.timerCheckNewImage_Tick);
             // 
             // Form1
